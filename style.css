@@ -52,9 +52,9 @@ p:last-child {
     font-weight: 900;
  }
 
- .text-center {
+.text-center {
     text-align: center;
- }
+}
 
 .c-flex {
     display: flex;
@@ -91,18 +91,22 @@ p:last-child {
 
 .wrapper {
     max-width: 1024px;
+    width: 100%;
 }
 
 .wrapper-2 {
     max-width: 820px;
+    width: 100%;    
 }
 
 .wrapper-3 {
     max-width: 782px;
+    width: 100%;    
 }
 
 .container-wrapper {
     width: 782px;
+    width: 100%;    
 }
 
 .logo {
@@ -127,6 +131,7 @@ nav {
 
 nav li {
     list-style-type: none;
+    text-align: center;
 }
 
 nav .wrapper {
@@ -184,15 +189,13 @@ nav .wrapper {
     background: var(--bg-color-light);
 }
 
-.testimonial-text {
+h2.testimonial-text {
     font-style: italic;
-    font-size: 36px;
     font-weight: 300;
 }
 
-.testimonial-name {
+h3.testimonial-name {
     text-align: right;
-    font-size: 24px;
     font-weight: bold;
 }
 
@@ -216,9 +219,103 @@ nav .wrapper {
     margin-bottom: 5px;
 }
 
+.footer {
+    padding: 40px 20px;
+}
+
 .footer p {
     color: #e3e4e6;
     text-align: center;
 }
 
+@media (max-width: 1024px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
 
+@media (max-width: 800px) {
+    .inner-wrapper.c-flex {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .item {
+        flex-basis: 200px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 37px;
+     }
+     
+    h2 {
+        font-size: 27px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .c-flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #section-1.hero-banner {
+        padding-top: 180px;
+    }
+
+    .hero-banner .left-content {
+        order: 2;
+        max-width: 470px;
+        text-align: center;
+    }
+
+    .hero-banner .right-content {
+        order: 1;
+    }
+
+    .hero-banner img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .hero-banner img {
+        max-width: 80%;
+        margin: auto;
+        display: block;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+
+    .cta-section {
+        text-align: center;
+    }
+
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .box {
+        width: 120px;
+        height: 120px;
+    }
+}
